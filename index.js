@@ -16,4 +16,37 @@ app.get('/old-page(.html)?', (req, res) => {
   res.redirect(301, '/new-page.html') // 302 by default (302 : temporary redirect, 301: permenet redirect )
 })
 
+app.get(
+  '/hello(.html)?',
+  (req, res, next) => {
+    console.log('attemped to load hello.html')
+    next()
+  },
+  (req, res) => {
+    res.send('Hello world!')
+  },
+)
+
+//chaining route handler
+const one = (req, res, next) => {
+  console.log('one')
+  next()
+}
+
+const two = (req, res, next) => {
+  console.log('two')
+  next()
+}
+
+const three = (req, res, next) => {
+  console.log('three')
+  res.send('Finished')
+}
+
+app.get('/chain(.html)?', [one, two, three])
+
+app.get('/*', (req, res) => {
+  res.status(404).sendFile(path.join(__dirname, 'views', '404.html'))
+})
+
 app.listen(PORT, () => console.log('Server running on port : ' + PORT))
