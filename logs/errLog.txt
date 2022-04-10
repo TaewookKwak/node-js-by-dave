@@ -1,1 +1,13 @@
 20220409	22:28:01	9e73c329-18cd-46b1-963f-15231ed86fe1	Error Not allowed by CORS
+20220410	12:07:13	bc3a013d-3cec-47e2-a37d-9bff584ce156	Error ENOENT: no such file or directory, stat 'C:\Users\rhkrx\Desktop\곤줄박이\node\routes\views\subdir\index.html'
+20220410	12:07:17	a1745a67-735b-492b-8c10-4736a1468e6c	Error ENOENT: no such file or directory, stat 'C:\Users\rhkrx\Desktop\곤줄박이\node\routes\views\subdir\index.html'
+20220410	12:07:20	ec77784e-2cf0-4073-8abe-b52648ffc903	Error ENOENT: no such file or directory, stat 'C:\Users\rhkrx\Desktop\곤줄박이\node\routes\views\subdir\index.html'
+20220410	12:07:26	ed8ec582-ec12-415b-a5ec-96c82412219b	Error ENOENT: no such file or directory, stat 'C:\Users\rhkrx\Desktop\곤줄박이\node\routes\views\subdir\test.html'
+20220410	12:08:48	4711e20e-f11a-416b-a677-a3f97796627c	Error ENOENT: no such file or directory, stat 'C:\Users\rhkrx\Desktop\곤줄박이\node\routes\views\subdir\index.html'
+20220410	12:08:51	b5616320-26d2-4feb-9fb0-b71d848210d3	Error ENOENT: no such file or directory, stat 'C:\Users\rhkrx\Desktop\곤줄박이\node\routes\views\subdir\index.html'
+20220410	12:13:28	0f31e9dd-3ad5-4b4f-9c38-432606951cf5	Error ENOENT: no such file or directory, stat 'C:\Users\rhkrx\Desktop\곤줄박이\node\routes\views\subdir\index.html'
+20220410	12:13:31	f7407fcf-624f-4b18-8b48-d1b4f380e1d9	Error ENOENT: no such file or directory, stat 'C:\Users\rhkrx\Desktop\곤줄박이\node\routes\views\subdir\index.html'
+20220410	12:13:37	6288633b-f158-4fd2-a8f9-7c61b0e668c3	Error ENOENT: no such file or directory, stat 'C:\Users\rhkrx\Desktop\곤줄박이\node\routes\views\subdir\index.html'
+20220410	12:13:41	702e8d54-4213-4c47-9123-c02a6e69bbc5	Error ENOENT: no such file or directory, stat 'C:\Users\rhkrx\Desktop\곤줄박이\node\routes\views\subdir\test.html'
+20220410	12:13:48	57d8a037-2abd-4b03-bf91-8f776bfd445f	Error ENOENT: no such file or directory, stat 'C:\Users\rhkrx\Desktop\곤줄박이\node\routes\views\subdir\test.html'
+20220410	12:13:58	ac0407ba-27e4-4d40-a052-c252ff70281b	Error ENOENT: no such file or directory, stat 'C:\Users\rhkrx\Desktop\곤줄박이\node\routes\views\subdir\index.html'

@@ -5,7 +5,6 @@ const cors = require('cors')
 const { logEvents, logger } = require('./middleware/logEvents')
 const errorHandler = require('./middleware/errorHandler')
 const PORT = process.env.PORT || 3500
-
 app.use(logger)
 
 // cross origin resource sharing
@@ -28,22 +27,17 @@ app.use(cors(corsOptions))
 
 app.use(express.urlencoded({ extended: false })) //urlencoded() : 한글이나 공백을 인코딩해준다
 
+//  built in middleware for json
 app.use(express.json())
 
-app.use(express.static(path.join(__dirname, '/public')))
+// serve static files
+app.use('/', express.static(path.join(__dirname, '/public')))
+app.use('/subdir', express.static(path.join(__dirname, '/public')))
 
-app.get('^/$|/index(.html)?', (req, res) => {
-  //   res.sendFile('./views/index.html', { root: __dirname })
-  res.sendFile(path.join(__dirname, './views', 'index.html'))
-})
-
-app.get('/new-page(.html)?', (req, res) => {
-  res.sendFile(path.join(__dirname, './views', 'new-page.html'))
-})
-
-app.get('/old-page(.html)?', (req, res) => {
-  res.redirect(301, '/new-page.html') // 302 by default (302 : temporary redirect, 301: permenet redirect )
-})
+// routes
+app.use('/', require('./routes/root'))
+app.use('/subdir', require('./routes/subdir'))
+app.use('/employees', require('./routes/api/employees'))
 
 app.get(
   '/hello(.html)?',
@@ -56,27 +50,27 @@ app.get(
   },
 )
 
-//chaining route handler
-const one = (req, res, next) => {
-  console.log('one')
-  next()
-}
+// //chaining route handler
+// const one = (req, res, next) => {
+//   console.log('one')
+//   next()
+// }
 
-const two = (req, res, next) => {
-  console.log('two')
-  next()
-}
+// const two = (req, res, next) => {
+//   console.log('two')
+//   next()
+// }
 
-const three = (req, res, next) => {
-  console.log('three')
-  res.send('Finished')
-}
+// const three = (req, res, next) => {
+//   console.log('three')
+//   res.send('Finished')
+// }
 
-app.get('/chain(.html)?', [one, two, three])
+// app.get('/chain(.html)?', [one, two, three])
 
-// app.get('/*', (req, res) => {
-//   res.status(404).sendFile(path.join(__dirname, 'views', '404.html'))
-// })
+// // app.get('/*', (req, res) => {
+// //   res.status(404).sendFile(path.join(__dirname, 'views', '404.html'))
+// // })
 
 app.all('*', (req, res) => {
   res.status(404)
