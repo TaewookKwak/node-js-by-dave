@@ -2,27 +2,14 @@ const express = require('express')
 const app = express()
 const path = require('path')
 const cors = require('cors')
+const corsOptions = require('./config/corsOption')
 const { logEvents, logger } = require('./middleware/logEvents')
 const errorHandler = require('./middleware/errorHandler')
 const PORT = process.env.PORT || 3500
 app.use(logger)
 
 // cross origin resource sharing
-const whitelist = [
-  'https://www.google2.com',
-  'http://127.0.0.1:5500',
-  'http://localhost:3500',
-]
-const corsOptions = {
-  origin: (origin, callback) => {
-    if (whitelist.indexOf(origin) !== -1 || !origin) {
-      callback(null, true)
-    } else {
-      callback(new Error('Not allowed by CORS'))
-    }
-  },
-  optionsSuccessStatus: 200,
-}
+
 app.use(cors(corsOptions))
 
 app.use(express.urlencoded({ extended: false })) //urlencoded() : 한글이나 공백을 인코딩해준다
@@ -32,23 +19,21 @@ app.use(express.json())
 
 // serve static files
 app.use('/', express.static(path.join(__dirname, '/public')))
-app.use('/subdir', express.static(path.join(__dirname, '/public')))
 
 // routes
 app.use('/', require('./routes/root'))
-app.use('/subdir', require('./routes/subdir'))
 app.use('/employees', require('./routes/api/employees'))
 
-app.get(
-  '/hello(.html)?',
-  (req, res, next) => {
-    console.log('attemped to load hello.html')
-    next()
-  },
-  (req, res) => {
-    res.send('Hello world!')
-  },
-)
+// app.get(
+//   '/hello(.html)?',
+//   (req, res, next) => {
+//     console.log('attemped to load hello.html')
+//     next()
+//   },
+//   (req, res) => {
+//     res.send('Hello world!')
+//   },
+// )
 
 // //chaining route handler
 // const one = (req, res, next) => {

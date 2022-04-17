@@ -11,3 +11,13 @@
 20220410	12:13:41	702e8d54-4213-4c47-9123-c02a6e69bbc5	Error ENOENT: no such file or directory, stat 'C:\Users\rhkrx\Desktop\곤줄박이\node\routes\views\subdir\test.html'
 20220410	12:13:48	57d8a037-2abd-4b03-bf91-8f776bfd445f	Error ENOENT: no such file or directory, stat 'C:\Users\rhkrx\Desktop\곤줄박이\node\routes\views\subdir\test.html'
 20220410	12:13:58	ac0407ba-27e4-4d40-a052-c252ff70281b	Error ENOENT: no such file or directory, stat 'C:\Users\rhkrx\Desktop\곤줄박이\node\routes\views\subdir\index.html'
+20220417	23:00:53	53679fc4-bf64-4850-ae2f-0cdc02e85d5c	TypeError res.json is not a function
+20220417	23:03:17	1d4c96b7-f0f7-4b07-ac38-23b01e100556	TypeError res.json is not a function
+20220417	23:04:46	80544e78-4744-4eec-b0a4-91ae54be9478	TypeError res.json is not a function
+20220417	23:04:46	3a39412d-c393-45c6-84b3-c420963fb370	TypeError res.json is not a function
+20220417	23:04:50	161686f3-1260-45bd-871d-1028245c6196	TypeError res.json is not a function
+20220417	23:06:11	b01e5f46-8839-4519-8440-8f70e121f6e3	TypeError res.json is not a function
+20220417	23:10:39	0e681654-79e1-43e7-a2fe-08dd9a4d30a0	TypeError res.json is not a function
+20220417	23:10:40	cdacb2bb-d5dc-4888-935d-16d9c080fe9e	TypeError res.json is not a function
+20220417	23:10:40	52d85fef-7da1-4c02-847e-9433d4c78590	TypeError res.json is not a function
+20220417	23:13:00	3d57ce95-6a0f-4af6-b7f1-9f6110fdcca0	SyntaxError Unexpected token } in JSON at position 16
